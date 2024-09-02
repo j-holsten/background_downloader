@@ -184,6 +184,9 @@ public class Uploader : NSObject, URLSessionTaskDelegate, StreamDelegate {
             header = "\(header)\r\n" +
             "content-type: text/plain; charset=utf-8\r\n" +
             "content-transfer-encoding: binary"
+        } else {
+            header = "\(header)\r\n" +
+            "content-type: application/json"
         }
         return "\(header)\r\n\r\n"
     }
